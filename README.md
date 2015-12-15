@@ -6,6 +6,7 @@ Uses millitary time as anyone would expect.
 
 #Sidebar gadgets for Windows 10
 Get plugin for it here: http://winaero.com/blog/desktop-gadgets-and-sidebar-for-windows-10/
+
 Install binary_millitary_time:
 * Copy binary_millitary_time.gadget folder to ~/AppData/Local/Microsoft/Windows\ Sidebar/Gadgets/
 * Launch Windows Sidebar
