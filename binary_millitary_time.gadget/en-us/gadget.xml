@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<gadget>
+  <name>Binary Millitary Time</name>
+  <version>1.0.0.0</version>
+  <author name="Adam Westman">
+  </author>
+  <copyright>&#169; Adam Westman.</copyright>
+  <description>Displays js Date in binary format with seconds, minutes and hours. Uses millitary time as anyone would expect.</description>
+  <icons>
+    <icon height="64" width="64" src="img/icon.png" />
+  </icons>
+  <hosts>
+    <host name="sidebar">
+      <base type="HTML" apiVersion="1.0.0" src="gadget.html" />
+      <permissions>Full</permissions>
+      <platform minPlatformVersion="1.0" />
+      <defaultImage src="img/icon.png" />
+    </host>
+  </hosts>
+</gadget>
