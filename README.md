@@ -1,5 +1,5 @@
 # binary_millitary_time
-A binary clock inspired me.
+A wrist watch displaying time in binary inspired me to provide this as a webwatch.
 
-Displays the current time in binary format; seconds, minutes and hours.
+Displays js Date in binary format with seconds, minutes and hours.
 Uses millitary time as anyone would expect.
