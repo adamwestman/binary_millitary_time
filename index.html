@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Binary millitary time</title>
+	<link href='https://fonts.googleapis.com/css?family=Inconsolata:700' rel='stylesheet' type='text/css'>
+	<style type="text/css">
+		body,html {
+			background-color:#000000;
+		    margin: 0;
+		    padding: 0;
+		    text-align: center;
+			height: 100%;
+			font-family: 'Inconsolata';
+			color:#ff0000;
+		}
+
+		.centered {
+			position: absolute;
+		    top: 50%;
+		    margin-top: -75px;
+		    left: 0px;
+		    right: 0px;
+		}
+
+		.binary_style {
+			display: block;
+			width: 100%;
+			font-size:50px; 
+			line-height: 40px;
+		}
+
+		.cr
+		{
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			padding-right: 10px;
+			padding-bottom: 10px;
+		}
+	</style>
+</head>
+<body>
+<div class="centered">
+	<span id="seconds" class="binary_style">000000</span>
+	<span id="minutes" class="binary_style">000000</span>
+	<span id="hours" class="binary_style">   00000</span>
+</div>
+<span class="cr">© Adam Westman 2015</span>
+<script type="text/javascript">
+	var $seconds = document.getElementById("seconds");
+	var $minutes = document.getElementById("minutes");
+	var $hours = document.getElementById("hours");
+
+	function to_binary_str(numbers, limit)
+	{
+		var txt = "";
+		while(limit >= 1)
+		{
+			txt += numbers >= limit ? 1 : 0;
+			numbers %= limit;
+			limit = Math.floor(limit / 2);
+		}
+		return txt;
+	}
+
+	function update_binary(seconds, minutes, hours)
+	{
+		$seconds.innerHTML = to_binary_str(seconds, 32)
+		$minutes.innerHTML = to_binary_str(minutes, 32)
+		$hours.innerHTML = to_binary_str(hours, 16)
+	}
+
+	var timer = setInterval(function()
+	{
+		var d = new Date();
+		update_binary(d.getSeconds(), d.getMinutes(), d.getHours());
+	}, 16);
+</script>
+</body>
+</html>
